@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>International Medical Cooperation Center for the Belt and Road</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/bootstrap-reboot.css">
+  <link rel="stylesheet" href="./css/bootstrap-grid.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<!-- <body style="font-family: 'Roboto', sans-serif; font-family: 'Noto Sans SC', sans-serif;"> -->
+
+<body style="font-family: 'Roboto', 'Noto Sans SC', sans-serif">
+  <header class="header">
+    <div class="header__top">
+      <div class="container">
+        <div class="lang">
+          <!-- <form action="{% url 'set_language' %}" method="post"> -->
+          <!-- {% csrf_token %} -->
+          <!-- <input type="hidden" name="next" value="{{ redirect_to }}"> -->
+          <!-- <input type="hidden" name="language" value="cn"> -->
+          <button type="submit" class="{% if LANG == 'cn' %}active{% endif %}">中文</button>
+          <!-- </form> -->
+          <!-- <form action="{% url 'set_language' %}" method="post"> -->
+          <!-- {% csrf_token %} -->
+          <!-- <input type="hidden" name="next" value="{{ redirect_to }}"> -->
+          <!-- <input type="hidden" name="language" value="ru"> -->
+          <button type="submit" class="{% if LANG == 'ru' %}active{% endif %}">РУС</button>
+          <!-- </form> -->
+          <!-- <form action="{% url 'set_language' %}" method="post"> -->
+          <!-- {% csrf_token %} -->
+          <!-- <input type="hidden" name="next" value="{{ redirect_to }}"> -->
+          <!-- <input type="hidden" name="language" value="en"> -->
+          <button type="submit" class="active">ENG</button>
+          <!-- </form> -->
+        </div>
+      </div>
+    </div>
+    <div class="header__inner">
+      <div class="container">
+        <a href="#" class="header__logo">
+          <img src="./img/logo.jpg" alt="IMCC">
+          <span>International Medical Cooperation Center for the Belt and Road</span>
+        </a>
+        <div class="search-form">
+          <form method="get">
+            <div class="search-inp">
+              <input name="q" type="text">
+              <button type="submit"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav class="main-nav">
+    <div class="container">
+      <ul class="main-nav__list">
+        <li><a href="#">About center </a></li>
+        <li><a href="#">Organization</a></li>
+        <li><a href="#">News events</a></li>
+        <li><a href="#">Cooperation and exchange</a></li>
+        <li><a href="#">Multimedia</a></li>
+        <li><a href="#">Platform services</a></li>
+      </ul>
+      <div class="menu-btn not-active" id="menu-btn"><span></span></div>
+      <div class="search-form">
+        <form method="get">
+          <div class="search-inp">
+            <input name="q" type="text">
+            <button type="submit"></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="top-news">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 col-lg-9">
+          <div class="top-news__item top-news__item--lg">
+            <img src="./media/top-news-1.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="top-news__item">
+            <img src="./media/top-news-2.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

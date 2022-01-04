@@ -1,0 +1,101 @@
+.header {
+  &__top {
+    text-align: right;
+    background: $light-grey;
+
+    .lang {
+      display: flex;
+      justify-content: flex-end;
+      height: 34px;
+      button {
+        color: $light-text;
+        line-height: 34px;
+        margin-left: 10px;
+        background: none;
+        border: none;
+        outline: none;
+
+        &.active {
+          color: $main-blue;
+        }
+
+        @include md_max {
+          font-size: 14px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+  &__inner {
+    padding: 20px 0;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    &:hover {
+      text-decoration: none;
+    }
+    img {
+      width: 90px;
+      height: 90px;
+      margin-right: 20px;
+      object-fit: cover;
+      @include md_max {
+        width: 70px;
+        height: 70px;
+        margin-right: 15px;
+      }
+    }
+    span {
+      max-width: 412px;
+      font-weight: 500;
+      font-size: 22px;
+      color: $dark-blue;
+      @include md_max {
+        font-size: 18px;
+      }
+    }
+  }
+  .search-form {
+    @include lg_max {
+      display: none;
+    }
+  }
+}
+.search-form {
+  .search-inp {
+    position: relative;
+    width: 250px;
+    height: 40px;
+
+    input {
+      width: 100%;
+      height: 40px;
+      border: none;
+      border-radius: 20px;
+      padding: 0 45px 0 20px;
+      font-size: 16px;
+      background: $light-grey;
+
+      &:focus {
+          outline: none;
+      }
+    }
+
+    button {
+      border: none;
+      outline: none;
+      position: absolute;
+      top: 0;
+      right: 5px;
+      width: 40px;
+      height: 40px;
+      background: url('../img/icon-search.svg') center no-repeat;
+    }
+  }
+}

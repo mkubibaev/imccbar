@@ -1,0 +1,18 @@
+body {
+  background: #fff;
+  font-size: 16px;
+}
+.top-news {
+  padding: 40px 0;
+
+  .top-news__item {
+    margin-bottom: 45px;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    &--lg {
+    }
+  }
+}
