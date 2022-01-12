@@ -11,4 +11,4 @@ settings_local.py
 
 .idea
 .vscode
-src/media/
+media/

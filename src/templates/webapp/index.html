@@ -1,0 +1,8 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+  {% for news_item in news %}
+    <h2>{{ news_item.title }}</h2>
+    <img src="{{ news_item.thumbnail.url }}" alt="">
+  {% endfor %}
+{% endblock %}

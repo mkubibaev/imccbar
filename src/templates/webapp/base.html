@@ -1,0 +1,28 @@
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANG %}
+
+
+<!doctype html>
+<html lang="{{ LANG }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>International Medical Cooperation Center for the Belt and Road</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="main">
+{#        {% include 'partial/top-bar.html' %}#}
+{#        {% include 'partial/header.html' %}#}
+{#        {% include 'partial/menu.html' %}#}
+
+        {% block content %}{% endblock %}
+    </div>
+{#    {% include 'partial/footer.html' %}#}
+</div>
+
+</body>
+</html>
