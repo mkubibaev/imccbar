@@ -1,0 +1,29 @@
+{% extends 'webapp/base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <div class="container news-list-page">
+    <h1 class="section-title">{% trans 'News' %}</h1>
+    <div class="row">
+      {% for news_item in news %}
+        <div class="col-12 col-lg-4">
+          <div class="news-card">
+            <a href="{% url 'webapp:news_detail' news_item.pk %}" class="news-card__img">
+              <img src="{{ news_item.thumbnail.url }}" alt="{{ news_item.title }}">
+            </a>
+            <div class="news-card__body">
+              <h4 class="news-card__title">
+                <a href="{% url 'webapp:news_detail' news_item.pk %}">{{ news_item.title }}</a>
+              </h4>
+              <span class="news-card__date">{{ news_item.created_at | date:'Y / m / d' }}</span>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% if is_paginated %}
+      {% include 'webapp/partial/pagination.html' %}
+    {% endif %}
+
+  </div>
+{% endblock %}

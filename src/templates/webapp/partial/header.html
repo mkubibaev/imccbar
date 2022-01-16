@@ -1,0 +1,66 @@
+{% load static %}
+{% load i18n %}
+
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="lang">
+        <form action="{% url 'set_language' %}" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="next" value="{{ redirect_to }}">
+          <input type="hidden" name="language" value="zh-cn">
+          <button type="submit" class="{% if LANG == 'zh-cn' %}active{% endif %}">中文</button>
+        </form>
+        <form action="{% url 'set_language' %}" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="next" value="{{ redirect_to }}">
+          <input type="hidden" name="language" value="ru">
+          <button type="submit" class="{% if LANG == 'ru' %}active{% endif %}">Рус</button>
+        </form>
+        <form action="{% url 'set_language' %}" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="next" value="{{ redirect_to }}">
+          <input type="hidden" name="language" value="en">
+          <button type="submit" class="{% if LANG == 'en' %}active{% endif %}">Eng</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="header__inner">
+    <div class="container">
+      <a href="/" class="logo">
+        <span class="logo__img"><img src="{% static '/img/logo.png' %}" alt="IMCC"></span>
+        <span class="logo__title">{% trans 'International Medical Cooperation Center for the Belt and Road' %}</span>
+      </a>
+      <div class="search-form">
+        <form method="get">
+          <div class="search-inp">
+            <input name="q" type="text">
+            <button type="submit"></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+<nav class="main-nav">
+  <div class="container">
+    <ul class="main-nav__list">
+      <li><a href="#">{% trans 'About center' %}</a></li>
+      <li><a href="#">{% trans 'Organization' %}</a></li>
+      <li><a href="{% url 'webapp:news_list' %}">{% trans 'News events' %}</a></li>
+      <li><a href="#">{% trans 'Cooperation and exchange' %}</a></li>
+      <li><a href="#">{% trans 'Multimedia' %}</a></li>
+      <li><a href="#">{% trans 'Platform services' %}</a></li>
+    </ul>
+    <div class="menu-btn not-active" id="menu-btn"><span></span></div>
+    <div class="search-form">
+      <form method="get">
+        <div class="search-inp">
+          <input name="q" type="text">
+          <button type="submit"></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>

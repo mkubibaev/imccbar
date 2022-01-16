@@ -1,0 +1,103 @@
+{% load i18n %}
+
+<div class="top-news">
+  <div class="container">
+    <div class="row">
+      {% if news.0 %}
+        <div class="col-12 col-lg-9">
+          <div class="top-news__item top-news__item--lg">
+            <a href="{% url 'webapp:news_detail' news.0.pk %}" class="top-news__item-img">
+              <img src="{{ news.0.thumbnail.url }}" alt="{{ news.0.title }}">
+            </a>
+            <h3 class="top-news__item-title">
+              <a href="{% url 'webapp:news_detail' news.0.pk %}">{{ news.0.title }}</a>
+            </h3>
+            <span class="top-news__item-date">{{ news.0.created_at | date:'Y / m / d' }}</span>
+          </div>
+        </div>
+      {% endif %}
+      <div class="col-12 col-lg-3">
+        {% if news.1 %}
+          <div class="top-news__item">
+            <a href="{% url 'webapp:news_detail' news.1.pk %}" class="top-news__item-img">
+              <img src="{{ news.1.thumbnail.url }}" alt="{{ news.1.title }}">
+            </a>
+            <h3 class="top-news__item-title">
+              <a href="{% url 'webapp:news_detail' news.1.pk %}">{{ news.1.title }}</a>
+            </h3>
+            <span class="top-news__item-date">{{ news.1.created_at | date:'Y / m / d' }}</span>
+          </div>
+        {% endif %}
+        {% if news.2 %}
+          <div class="top-news__item">
+            <a href="{% url 'webapp:news_detail' news.2.pk %}" class="top-news__item-img">
+              <img src="{{ news.2.thumbnail.url }}" alt="{{ news.2.title }}">
+            </a>
+            <h3 class="top-news__item-title">
+              <a href="{% url 'webapp:news_detail' news.2.pk %}">{{ news.2.title }}</a>
+            </h3>
+            <span class="top-news__item-date">{{ news.2.created_at | date:'Y / m / d' }}</span>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="top-news__readmore">
+      <a href="{% url 'webapp:news_list' %}" class="link-btn">{% trans 'All news' %}</a>
+    </div>
+  </div>
+</div>
+{% if news.3 %}
+  <div class="home-news">
+    <div class="container">
+      <h2 class="section-title">{% trans 'News' %}</h2>
+      <div class="row">
+        <div class="col-12 col-lg-4">
+          <div class="news-card">
+            <a href="{% url 'webapp:news_detail' news.3.pk %}" class="news-card__img">
+              <img src="{{ news.3.thumbnail.url }}" alt="{{ news.3.title }}">
+            </a>
+            <div class="news-card__body">
+              <h4 class="news-card__title">
+                <a href="{% url 'webapp:news_detail' news.3.pk %}">{{ news.3.title }}</a>
+              </h4>
+              <span class="news-card__date">{{ news.3.created_at | date:'Y / m / d' }}</span>
+            </div>
+          </div>
+        </div>
+        {% if news.4 %}
+          <div class="col-12 col-lg-4">
+            <div class="news-card">
+              <a href="{% url 'webapp:news_detail' news.4.pk %}" class="news-card__img">
+                <img src="{{ news.4.thumbnail.url }}" alt="{{ news.4.title }}">
+              </a>
+              <div class="news-card__body">
+                <h4 class="news-card__title">
+                  <a href="{% url 'webapp:news_detail' news.4.pk %}">{{ news.4.title }}</a>
+                </h4>
+                <span class="news-card__date">{{ news.4.created_at | date:'Y / m / d' }}</span>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+        {% if news.5 %}
+          <div class="col-12 col-lg-4">
+            <div class="news-card">
+              <a href="{% url 'webapp:news_detail' news.5.pk %}" class="news-card__img">
+                <img src="{{ news.5.thumbnail.url }}" alt="{{ news.5.title }}">
+              </a>
+              <div class="news-card__body">
+                <h4 class="news-card__title">
+                  <a href="{% url 'webapp:news_detail' news.5.pk %}">{{ news.5.title }}</a>
+                </h4>
+                <span class="news-card__date">{{ news.5.created_at | date:'Y / m / d' }}</span>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+      <div class="text-center pt-md-3">
+        <a href="#" class="link-btn">{% trans 'All news' %}</a>
+      </div>
+    </div>
+  </div>
+{% endif %}

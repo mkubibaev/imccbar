@@ -5,6 +5,7 @@ from webapp.models import News
 
 class BaseAdmin(TranslationAdmin):
     exclude = []
+    save_as = True
     readonly_fields = ('created_at', 'updated_at')
 
 

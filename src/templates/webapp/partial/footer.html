@@ -1,0 +1,28 @@
+{% load static %}
+{% load i18n %}
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-9">
+        <a href="#" class="logo">
+          <span class="logo__img"><img src="{% static '/img/logo.png' %}" alt="IMCC"></span>
+          <span class="logo__title">{% trans 'International Medical Cooperation Center for the Belt and Road' %}</span>
+        </a>
+      </div>
+      <div class="col-12 col-md-3">
+        <ul class="footer__menu">
+          <li><a href="#">Faq</a></li>
+          <li><a href="#">Contacts</a></li>
+          <li><a href="#">Links</a></li>
+        </ul>
+        <div class="footer__icons">
+          <a href="#" class="footer__icon footer__icon--instagram"></a>
+          <a href="#" class="footer__icon footer__icon--facebook"></a>
+          <a href="#" class="footer__icon footer__icon--youtube"></a>
+        </div>
+      </div>
+      <span class="footer__copyright"> © 2022 All rights reserved</span>
+    </div>
+  </div>
+</footer>

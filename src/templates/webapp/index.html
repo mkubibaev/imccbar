@@ -1,8 +1,27 @@
 {% extends 'webapp/base.html' %}
+{% load static %}
+{% load i18n %}
 
 {% block content %}
-  {% for news_item in news %}
-    <h2>{{ news_item.title }}</h2>
-    <img src="{{ news_item.thumbnail.url }}" alt="">
-  {% endfor %}
+  {% include 'webapp/news/home-news-section.html' %}
+  <div class="home-map"></div>
+  <div class="home-about">
+    <div class="container">
+      <a href="#" class="logo">
+        <span class="logo__img"><img src="{% static '/img/logo.png' %}" alt="IMCC"></span>
+        <span class="logo__title">{% trans 'International Medical Cooperation Center for the Belt and Road' %}</span>
+      </a>
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <p>Asperiores, voluptate sunt qui quo amet magnam ex at excepturi deserunt natus, perspiciatis nobis illum
+            corporis! Adipisci, fuga assumenda enim natus illo.</p>
+          <p>Quo reprehenderit dolorum officiis possimus corporis perferendis illum corporis</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <p>Adipisci, fuga assumenda enim natus illo, quo reprehenderit dolorum officiis possimus corporis perferendis
+            Fuga assumenda enim natus illo, quo reprehenderit dolorum officiis possimus corporis perferendis</p>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
