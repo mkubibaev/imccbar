@@ -25,3 +25,14 @@ class News(models.Model):
         return self.title[:30]
 
 
+class AboutCenterPage(models.Model):
+    body = RichTextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'About center page'
+        verbose_name_plural = 'About center page'
+
+    def __str__(self):
+        return 'About center text'

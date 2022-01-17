@@ -2468,6 +2468,11 @@ body {
   height: 100%;
 }
 
+.detail-page {
+  max-width: 825px;
+  margin: 0 auto;
+}
+
 .top-news {
   margin-bottom: 30px;
 }
@@ -2599,7 +2604,6 @@ body {
 }
 
 .news-detail {
-  max-width: 825px;
   margin: 0 auto;
 }
 
