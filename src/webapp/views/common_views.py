@@ -1,5 +1,5 @@
 from django.views.generic import TemplateView
-from webapp.models import News, AboutCenterPage
+from webapp.models import News, AboutCenterPage, OrgStructurePage
 
 
 class HomeView(TemplateView):
@@ -20,3 +20,10 @@ class AboutCenterView(TemplateView):
         return context
 
 
+class OrgStructurePageView(TemplateView):
+    template_name = 'webapp/org-structure.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['org'] = OrgStructurePage.objects.first()
+        return context

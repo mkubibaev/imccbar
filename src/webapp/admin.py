@@ -1,6 +1,6 @@
 from django.contrib import admin
 from modeltranslation.admin import TranslationAdmin
-from webapp.models import News, AboutCenterPage
+from webapp.models import News, AboutCenterPage, OrgStructurePage
 
 
 class BaseAdmin(TranslationAdmin):
@@ -10,3 +10,4 @@ class BaseAdmin(TranslationAdmin):
 
 admin.site.register(News, BaseAdmin)
 admin.site.register(AboutCenterPage, BaseAdmin)
+admin.site.register(OrgStructurePage, BaseAdmin)

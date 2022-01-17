@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-16 07:41+0000\n"
+"POT-Creation-Date: 2022-01-17 09:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,8 @@ msgstr ""
 msgid "中文"
 msgstr ""
 
-#: templates/webapp/index.html:12 templates/webapp/partial/footer.html:10
+#: templates/webapp/about-center.html:7 templates/webapp/index.html:12
+#: templates/webapp/partial/footer.html:10
 #: templates/webapp/partial/header.html:33
 msgid "International Medical Cooperation Center for the Belt and Road"
 msgstr "International Medical Cooperation Center for the Belt and Road"
@@ -41,8 +42,13 @@ msgid "All news"
 msgstr "All news"
 
 #: templates/webapp/news/home-news-section.html:52
+#: templates/webapp/news/news-list.html:6
 msgid "News"
 msgstr "News"
+
+#: templates/webapp/org-structure.html:7
+msgid "Organization structure"
+msgstr "Organization structure"
 
 #: templates/webapp/partial/header.html:49
 msgid "About center"

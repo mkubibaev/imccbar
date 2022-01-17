@@ -35,4 +35,17 @@ class AboutCenterPage(models.Model):
         verbose_name_plural = 'About center page'
 
     def __str__(self):
-        return 'About center text'
+        return 'About center'
+
+
+class OrgStructurePage(models.Model):
+    body = RichTextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Organization structure page'
+        verbose_name_plural = 'Organization structure page'
+
+    def __str__(self):
+        return 'Organization structure'
