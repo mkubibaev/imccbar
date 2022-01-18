@@ -57,9 +57,9 @@
               <img src="{{ news.3.thumbnail.url }}" alt="{{ news.3.title }}">
             </a>
             <div class="news-card__body">
-              <h4 class="news-card__title">
+              <h3 class="news-card__title">
                 <a href="{% url 'webapp:news_detail' news.3.pk %}">{{ news.3.title }}</a>
-              </h4>
+              </h3>
               <span class="news-card__date">{{ news.3.created_at | date:'Y / m / d' }}</span>
             </div>
           </div>
@@ -71,9 +71,9 @@
                 <img src="{{ news.4.thumbnail.url }}" alt="{{ news.4.title }}">
               </a>
               <div class="news-card__body">
-                <h4 class="news-card__title">
+                <h3 class="news-card__title">
                   <a href="{% url 'webapp:news_detail' news.4.pk %}">{{ news.4.title }}</a>
-                </h4>
+                </h3>
                 <span class="news-card__date">{{ news.4.created_at | date:'Y / m / d' }}</span>
               </div>
             </div>
@@ -86,9 +86,9 @@
                 <img src="{{ news.5.thumbnail.url }}" alt="{{ news.5.title }}">
               </a>
               <div class="news-card__body">
-                <h4 class="news-card__title">
+                <h3 class="news-card__title">
                   <a href="{% url 'webapp:news_detail' news.5.pk %}">{{ news.5.title }}</a>
-                </h4>
+                </h3>
                 <span class="news-card__date">{{ news.5.created_at | date:'Y / m / d' }}</span>
               </div>
             </div>
@@ -96,7 +96,7 @@
         {% endif %}
       </div>
       <div class="text-center pt-md-3">
-        <a href="#" class="link-btn">{% trans 'All news' %}</a>
+        <a href="{% url 'webapp:news_list' %}" class="link-btn">{% trans 'All news' %}</a>
       </div>
     </div>
   </div>

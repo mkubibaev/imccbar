@@ -49,3 +49,42 @@ class OrgStructurePage(models.Model):
 
     def __str__(self):
         return 'Organization structure'
+
+
+class PhotoAlbum(models.Model):
+    title = models.CharField(max_length=255)
+    poster = models.ImageField(upload_to='uploads/img/gallery/%Y/%m',
+                               validators=[validate_image_file_extension])
+    thumbnail = ImageSpecField(source='poster',
+                               processors=[ResizeToFill(825, 480)],
+                               format='JPEG',
+                               options={'quality': 100})
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Multimedia gallery'
+        verbose_name_plural = 'Multimedia galleries'
+
+    def __str__(self):
+        return self.title[:30]
+
+
+class PhotoAlbumImage(models.Model):
+    image = models.ImageField(upload_to='uploads/img/gallery/%Y/%m',
+                              validators=[validate_image_file_extension])
+    thumbnail = ImageSpecField(source='image',
+                               processors=[ResizeToFill(825, 480)],
+                               format='JPEG',
+                               options={'quality': 100})
+    album = models.ForeignKey('webapp.PhotoAlbum', related_name='images', on_delete=models.CASCADE,
+                              verbose_name='Multimedia gallery')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Multimedia photo'
+        verbose_name_plural = 'Multimedia photos'
+
+    def __str__(self):
+        return 'Multimedia photo'

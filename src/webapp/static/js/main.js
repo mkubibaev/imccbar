@@ -10,9 +10,23 @@ $(document).ready(function () {
     }
   });
 
+  //multimedia tabs on home page
   $(".multimedia-tab__content").not(":first").hide();
   $(".multimedia-tab__link").click(function () {
     $(".multimedia-tab__link").removeClass("active").eq($(this).index()).addClass("active");
     $(".multimedia-tab__content").hide().eq($(this).index()).fadeIn()
   }).eq(0).addClass("active");
+
+  //multimedia gallery
+  $('[data-fancybox="images"]').fancybox({
+    buttons: [
+      //"zoom",
+      //"share",
+      "slideShow",
+      //"fullScreen",
+      //"download",
+      //"thumbs",
+      "close"
+    ],
+  });
 })

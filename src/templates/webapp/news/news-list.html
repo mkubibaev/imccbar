@@ -12,9 +12,9 @@
               <img src="{{ news_item.thumbnail.url }}" alt="{{ news_item.title }}">
             </a>
             <div class="news-card__body">
-              <h4 class="news-card__title">
+              <h3 class="news-card__title">
                 <a href="{% url 'webapp:news_detail' news_item.pk %}">{{ news_item.title }}</a>
-              </h4>
+              </h3>
               <span class="news-card__date">{{ news_item.created_at | date:'Y / m / d' }}</span>
             </div>
           </div>
