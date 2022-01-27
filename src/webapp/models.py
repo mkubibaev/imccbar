@@ -1,13 +1,13 @@
 from django.db import models
 from django.core.validators import validate_image_file_extension
-from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFill
 
 
 class News(models.Model):
     title = models.CharField(max_length=256)
-    body = RichTextField()
+    body = RichTextUploadingField()
     image = models.ImageField(upload_to='uploads/img/news/%Y/%m',
                               validators=[validate_image_file_extension])
     thumbnail = ImageSpecField(source='image',
@@ -26,26 +26,26 @@ class News(models.Model):
 
 
 class AboutCenterPage(models.Model):
-    body = RichTextField()
+    body = RichTextUploadingField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        verbose_name = 'About center page'
-        verbose_name_plural = 'About center page'
+        verbose_name = 'About center'
+        verbose_name_plural = 'About center'
 
     def __str__(self):
         return 'About center'
 
 
 class OrgStructurePage(models.Model):
-    body = RichTextField()
+    body = RichTextUploadingField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        verbose_name = 'Organization structure page'
-        verbose_name_plural = 'Organization structure page'
+        verbose_name = 'Organization structure'
+        verbose_name_plural = 'Organization structure'
 
     def __str__(self):
         return 'Organization structure'
@@ -88,3 +88,29 @@ class PhotoAlbumImage(models.Model):
 
     def __str__(self):
         return 'Multimedia photo'
+
+
+class CooperationPage(models.Model):
+    body = RichTextUploadingField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Cooperation and exchange'
+        verbose_name_plural = 'Cooperation and exchange'
+
+    def __str__(self):
+        return 'Cooperation and exchange'
+
+
+class ServicesPage(models.Model):
+    body = RichTextUploadingField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Platform services'
+        verbose_name_plural = 'Platform services'
+
+    def __str__(self):
+        return 'Platform services'

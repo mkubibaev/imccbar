@@ -19,6 +19,14 @@ body {
 .detail-page {
   max-width: 825px;
   margin: 0 auto;
+
+  img {
+    display: block;
+    width: 100%!important;
+    max-width: 825px!important;
+    height: auto!important;
+    margin-bottom: 30px;
+  }
 }
 
 .top-news {

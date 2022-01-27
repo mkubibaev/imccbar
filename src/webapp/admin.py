@@ -1,7 +1,8 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
 from modeltranslation.admin import TranslationAdmin
-from webapp.models import News, AboutCenterPage, OrgStructurePage, PhotoAlbum, PhotoAlbumImage
+from webapp.models import News, AboutCenterPage, OrgStructurePage, PhotoAlbum, PhotoAlbumImage, \
+    CooperationPage, ServicesPage
 
 
 class BaseAdmin(TranslationAdmin):
@@ -25,5 +26,7 @@ class PhotoAlbumImageAdmin(admin.ModelAdmin):
 admin.site.register(News, BaseAdmin)
 admin.site.register(AboutCenterPage, BaseAdmin)
 admin.site.register(OrgStructurePage, BaseAdmin)
+admin.site.register(CooperationPage, BaseAdmin)
+admin.site.register(ServicesPage, BaseAdmin)
 admin.site.register(PhotoAlbum, BaseAdmin)
 admin.site.register(PhotoAlbumImage, PhotoAlbumImageAdmin)

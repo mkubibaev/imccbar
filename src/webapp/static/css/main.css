@@ -2473,6 +2473,14 @@ body {
   margin: 0 auto;
 }
 
+.detail-page img {
+  display: block;
+  width: 100% !important;
+  max-width: 825px !important;
+  height: auto !important;
+  margin-bottom: 30px;
+}
+
 .top-news {
   margin-bottom: 30px;
 }

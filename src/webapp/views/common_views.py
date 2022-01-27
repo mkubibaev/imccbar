@@ -1,7 +1,8 @@
 from django.views.generic import TemplateView, ListView, DetailView
 
 from core.settings import PAGINATION_COUNT
-from webapp.models import News, AboutCenterPage, OrgStructurePage, PhotoAlbum, PhotoAlbumImage
+from webapp.models import News, AboutCenterPage, OrgStructurePage, PhotoAlbum, PhotoAlbumImage, \
+    CooperationPage, ServicesPage
 
 
 class HomeView(TemplateView):
@@ -48,3 +49,20 @@ class PhotoGalleryDetailView(DetailView):
     context_object_name = 'album'
     template_name = 'webapp/photo-album-detail.html'
 
+
+class CooperationPageView(TemplateView):
+    template_name = 'webapp/cooperation.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['cooperation'] = CooperationPage.objects.first()
+        return context
+
+
+class ServicesPageView(TemplateView):
+    template_name = 'webapp/services.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['services'] = ServicesPage.objects.first()
+        return context

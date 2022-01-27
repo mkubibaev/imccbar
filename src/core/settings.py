@@ -160,8 +160,9 @@ CKEDITOR_CONFIGS = {
                        'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']},
             {'name': 'links', 'items': ['Link', 'Unlink', 'Anchor']},
             '/',
-            {'name': 'styles', 'items': ['Format', 'FontSize']},
+            {'name': 'styles', 'items': ['FontSize']},
             {'name': 'colors', 'items': ['TextColor', 'BGColor']},
+            {'name': 'insert', 'items': ['Image']},
             {'name': 'document', 'items': ['Source']},
         ],
     }
