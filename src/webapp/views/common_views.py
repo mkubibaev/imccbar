@@ -2,7 +2,7 @@ from django.views.generic import TemplateView, ListView, DetailView
 
 from core.settings import PAGINATION_COUNT
 from webapp.models import News, AboutCenterPage, OrgStructurePage, PhotoAlbum, PhotoAlbumImage, \
-    CooperationPage, ServicesPage
+    CooperationPage, ServicesPage, FAQPage, ContactsPage, LinksPage
 
 
 class HomeView(TemplateView):
@@ -65,4 +65,31 @@ class ServicesPageView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['services'] = ServicesPage.objects.first()
+        return context
+
+
+class FAQPageView(TemplateView):
+    template_name = 'webapp/FAQ.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['faq'] = FAQPage.objects.first()
+        return context
+
+
+class ContactsPageView(TemplateView):
+    template_name = 'webapp/contacts.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['contacts'] = ContactsPage.objects.first()
+        return context
+
+
+class LinksPageView(TemplateView):
+    template_name = 'webapp/links.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['links'] = LinksPage.objects.first()
         return context

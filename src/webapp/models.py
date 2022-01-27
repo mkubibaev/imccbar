@@ -114,3 +114,42 @@ class ServicesPage(models.Model):
 
     def __str__(self):
         return 'Platform services'
+
+
+class FAQPage(models.Model):
+    body = RichTextUploadingField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'FAQ'
+        verbose_name_plural = 'FAQ'
+
+    def __str__(self):
+        return 'FAQ'
+
+
+class ContactsPage(models.Model):
+    body = RichTextUploadingField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Contacts'
+        verbose_name_plural = 'Contacts'
+
+    def __str__(self):
+        return 'Contacts'
+
+
+class LinksPage(models.Model):
+    body = RichTextUploadingField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Links'
+        verbose_name_plural = 'Links'
+
+    def __str__(self):
+        return 'Links'

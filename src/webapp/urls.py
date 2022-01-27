@@ -14,4 +14,7 @@ urlpatterns = [
     path('multimadia/<int:pk>', views.PhotoGalleryDetailView.as_view(), name='album_detail'),
     path('cooperation-and-exchange', views.CooperationPageView.as_view(), name='cooperation_page'),
     path('platform-services', views.ServicesPageView.as_view(), name='platform_services'),
+    path('faq', views.FAQPageView.as_view(), name='faq'),
+    path('contacts', views.ContactsPageView.as_view(), name='contacts'),
+    path('links', views.LinksPageView.as_view(), name='links'),
 ]

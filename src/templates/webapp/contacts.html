@@ -1,0 +1,11 @@
+{% extends 'webapp/base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <div class="container">
+    <div class="detail-page">
+      <h1 class="section-title">{% trans 'Contacts' %}</h1>
+      {{ contacts.body | safe }}
+    </div>
+  </div>
+{% endblock %}

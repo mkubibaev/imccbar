@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-17 09:04+0000\n"
+"POT-Creation-Date: 2022-01-27 16:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,11 +29,35 @@ msgstr ""
 msgid "中文"
 msgstr ""
 
-#: templates/webapp/about-center.html:7 templates/webapp/index.html:12
-#: templates/webapp/partial/footer.html:10
+#: templates/webapp/FAQ.html:7
+msgid "Frequently Asked Questions"
+msgstr "常见问题解答"
+
+#: templates/webapp/about-center.html:7 templates/webapp/partial/header.html:49
+msgid "About center"
+msgstr "关于中心"
+
+#: templates/webapp/cooperation.html:7 templates/webapp/partial/header.html:52
+msgid "Cooperation and exchange"
+msgstr "合作交流"
+
+#: templates/webapp/index.html:13 templates/webapp/partial/footer.html:10
 #: templates/webapp/partial/header.html:33
 msgid "International Medical Cooperation Center for the Belt and Road"
 msgstr "一带一路 国际医疗合作中心"
+
+#: templates/webapp/index.html:35 templates/webapp/org-structure.html:7
+msgid "Organization structure"
+msgstr "组织机构"
+
+#: templates/webapp/index.html:38 templates/webapp/index.html:119
+msgid "Read more"
+msgstr "阅读更多"
+
+#: templates/webapp/index.html:130 templates/webapp/partial/header.html:53
+#: templates/webapp/photo-album-list.html:6
+msgid "Multimedia"
+msgstr "多媒体"
 
 #: templates/webapp/news/home-news-section.html:45
 #: templates/webapp/news/home-news-section.html:99
@@ -45,13 +69,21 @@ msgstr "所有新闻"
 msgid "News"
 msgstr "新闻"
 
-#: templates/webapp/org-structure.html:7
-msgid "Organization structure"
-msgstr "组织机构"
+#: templates/webapp/partial/footer.html:15
+msgid "Faq"
+msgstr "常见问题集"
 
-#: templates/webapp/partial/header.html:49
-msgid "About center"
-msgstr "关于中心"
+#: templates/webapp/partial/footer.html:16
+msgid "Contacts"
+msgstr "联系方式"
+
+#: templates/webapp/partial/footer.html:17
+msgid "Links"
+msgstr "相关链接"
+
+#: templates/webapp/partial/footer.html:25
+msgid "All rights reserved"
+msgstr "保留所有权利"
 
 #: templates/webapp/partial/header.html:50
 msgid "Organization"
@@ -61,14 +93,6 @@ msgstr "组织机构"
 msgid "News events"
 msgstr "新闻事件"
 
-#: templates/webapp/partial/header.html:52
-msgid "Cooperation and exchange"
-msgstr "合作交流"
-
-#: templates/webapp/partial/header.html:53
-msgid "Multimedia"
-msgstr "多媒体"
-
-#: templates/webapp/partial/header.html:54
+#: templates/webapp/partial/header.html:54 templates/webapp/services.html:7
 msgid "Platform services"
 msgstr "平台服务"
