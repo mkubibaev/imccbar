@@ -1,6 +1,6 @@
 from modeltranslation.translator import register, TranslationOptions
 from webapp.models import News, AboutCenterPage, OrgStructurePage, PhotoAlbum, \
-    CooperationPage, ServicesPage, FAQPage, ContactsPage, LinksPage
+    CooperationPage, ServicesPage, FAQPage, ContactsPage, LinksPage, AboutCenterPreview, OrgStructurePreview
 
 
 @register(News)
@@ -15,8 +15,20 @@ class AboutCenterPageTranslationOptions(TranslationOptions):
     required_languages = ('zh-cn', 'ru', 'en')
 
 
+@register(AboutCenterPreview)
+class AboutCenterPreviewTranslationOptions(TranslationOptions):
+    fields = ('body',)
+    required_languages = ('zh-cn', 'ru', 'en')
+
+
 @register(OrgStructurePage)
 class OrgStructurePageTranslationOptions(TranslationOptions):
+    fields = ('body',)
+    required_languages = ('zh-cn', 'ru', 'en')
+
+
+@register(OrgStructurePreview)
+class OrgStructurePreviewTranslationOptions(TranslationOptions):
     fields = ('body',)
     required_languages = ('zh-cn', 'ru', 'en')
 

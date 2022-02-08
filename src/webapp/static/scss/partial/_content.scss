@@ -272,7 +272,7 @@ body {
   padding: 60px 0;
 
   &__inner {
-    padding: 40px 0;
+    padding: 50px 0 20px;
     position: relative;
     @include md-max {
       padding: 0;
@@ -282,9 +282,9 @@ body {
       content: "";
       position: absolute;
       height: 100%;
-      width: 33%;
+      width: 25%;
       background: #EEF3FF;
-      border-radius: 120px 0 0 120px;
+      border-radius: 80px 0 0 80px;
       top: 0;
       right: 0;
       @include lg_max {
@@ -311,6 +311,9 @@ body {
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 40px;
+    @include lg_min {
+      padding-right: 40px;
+    }
   }
 
   &__list {
@@ -329,23 +332,29 @@ body {
   }
 
   &__item {
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    height: calc(100% - 30px);
+    min-height: 107px;
+
+
     display: flex;
-    margin-bottom: 35px;
+    width: 100%;
+    margin-bottom: 30px;
     align-items: center;
-    @include md-max {
-      margin-bottom: 24px;
-    }
   }
 
   &__item-num {
-    width: 34px;
-    min-width: 34px;
-    height: 34px;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
     background: $main-blue;
     border-radius: 5px;
     display: block;
     text-align: center;
-    line-height: 34px;
+    line-height: 40px;
     color: #fff;
     font-size: 20px;
     font-weight: 700;
@@ -353,7 +362,7 @@ body {
   }
 
   &__item-label {
-    font-size: 16px;
+    font-size: 18px;
     color: $dark-blue;
   }
 
@@ -361,6 +370,7 @@ body {
     display: none;
     text-align: center;
     @include lg-max {
+      margin-top: 10px;
       display: block;
     }
   }

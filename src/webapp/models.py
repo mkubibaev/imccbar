@@ -38,6 +38,19 @@ class AboutCenterPage(models.Model):
         return 'About center'
 
 
+class AboutCenterPreview(models.Model):
+    body = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'About center preview'
+        verbose_name_plural = 'About center preview'
+
+    def __str__(self):
+        return 'About center preview'
+
+
 class OrgStructurePage(models.Model):
     body = RichTextUploadingField()
     created_at = models.DateTimeField(auto_now_add=True)
@@ -49,6 +62,19 @@ class OrgStructurePage(models.Model):
 
     def __str__(self):
         return 'Organization structure'
+
+
+class OrgStructurePreview(models.Model):
+    body = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Organization structure preview'
+        verbose_name_plural = 'Organization structure preview'
+
+    def __str__(self):
+        return 'Organization structure preview'
 
 
 class PhotoAlbum(models.Model):
@@ -148,8 +174,8 @@ class LinksPage(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        verbose_name = 'Links'
-        verbose_name_plural = 'Links'
+        verbose_name = 'Useful links'
+        verbose_name_plural = 'Useful links'
 
     def __str__(self):
-        return 'Links'
+        return 'Useful links'

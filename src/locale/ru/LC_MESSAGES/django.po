@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-27 16:25+0000\n"
+"POT-Creation-Date: 2022-02-08 17:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,27 +40,52 @@ msgstr "Часто задаваемые вопросы"
 msgid "About center"
 msgstr "О центре"
 
-#: templates/webapp/cooperation.html:7 templates/webapp/partial/header.html:52
-msgid "Cooperation and exchange"
-msgstr "Кооперативный обмен"
-
-#: templates/webapp/index.html:13 templates/webapp/partial/footer.html:10
+#: templates/webapp/base.html:13 templates/webapp/index.html:13
+#: templates/webapp/partial/footer.html:10
 #: templates/webapp/partial/header.html:33
 msgid "International Medical Cooperation Center for the Belt and Road"
 msgstr "Центр международного медицинского сотрудничества «Один пояс-один путь»"
 
-#: templates/webapp/index.html:35 templates/webapp/org-structure.html:7
+#: templates/webapp/contacts.html:7 templates/webapp/partial/footer.html:16
+msgid "Contacts"
+msgstr "Контакты"
+
+#: templates/webapp/cooperation.html:7 templates/webapp/partial/header.html:52
+msgid "Cooperation and exchange"
+msgstr "Кооперативный обмен"
+
+#: templates/webapp/index.html:29 templates/webapp/org-structure.html:7
 msgid "Organization structure"
 msgstr "Структура организации"
 
-#: templates/webapp/index.html:38 templates/webapp/index.html:119
+#: templates/webapp/index.html:31 templates/webapp/index.html:62
 msgid "Read more"
 msgstr "Подробнее"
 
-#: templates/webapp/index.html:130 templates/webapp/partial/header.html:53
+#: templates/webapp/index.html:39
+msgid "Advisory Committee"
+msgstr "Консультативный комитет"
+
+#: templates/webapp/index.html:45
+msgid "Experts Committee"
+msgstr "Комитет экспертов"
+
+#: templates/webapp/index.html:51
+msgid "Administrative Council"
+msgstr "Руководящий орган"
+
+#: templates/webapp/index.html:57
+msgid "Permanent Establishment"
+msgstr "Постоянный орган"
+
+#: templates/webapp/index.html:73 templates/webapp/partial/header.html:53
 #: templates/webapp/photo-album-list.html:6
 msgid "Multimedia"
 msgstr "Мультимедиа"
+
+#: templates/webapp/links.html:7 templates/webapp/partial/footer.html:17
+msgid "Links"
+msgstr "Ссылки"
 
 #: templates/webapp/news/home-news-section.html:45
 #: templates/webapp/news/home-news-section.html:99
@@ -75,14 +100,6 @@ msgstr "Новости"
 #: templates/webapp/partial/footer.html:15
 msgid "Faq"
 msgstr "Faq"
-
-#: templates/webapp/partial/footer.html:16
-msgid "Contacts"
-msgstr "Контакты"
-
-#: templates/webapp/partial/footer.html:17
-msgid "Links"
-msgstr "Ссылки"
 
 #: templates/webapp/partial/footer.html:25
 msgid "All rights reserved"

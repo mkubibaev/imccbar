@@ -8,19 +8,13 @@
 
   <div class="home-about">
     <div class="container">
-      <a href="#" class="logo">
+      <a href="{% url 'webapp:about_center' %}" class="logo">
         <span class="logo__img"><img src="{% static '/img/logo.png' %}" alt="IMCC"></span>
         <span class="logo__title">{% trans 'International Medical Cooperation Center for the Belt and Road' %}</span>
       </a>
       <div class="row">
-        <div class="col-12 col-lg-6">
-          <p>Asperiores, voluptate sunt qui quo amet magnam ex at excepturi deserunt natus, perspiciatis nobis illum
-            corporis! Adipisci, fuga assumenda enim natus illo.</p>
-          <p>Quo reprehenderit dolorum officiis possimus corporis perferendis illum corporis</p>
-        </div>
-        <div class="col-12 col-lg-6">
-          <p>Adipisci, fuga assumenda enim natus illo, quo reprehenderit dolorum officiis possimus corporis perferendis
-            Fuga assumenda enim natus illo, quo reprehenderit dolorum officiis possimus corporis perferendis</p>
+        <div class="col-12 col-lg-12">
+          <p>{{ about_center_preview.body }}</p>
         </div>
       </div>
     </div>
@@ -33,85 +27,34 @@
           <div class="col-12 col-lg-5">
             <div class="home-org-structure__info">
               <h2 class="section-title">{% trans 'Organization structure' %}</h2>
-              <p class="home-org-structure__descr">Des amet consectetur adipisicing elit. Dolores molestias iure tempore
-                est libero itaque molestias officiis possimus corporis perferendis</p>
+              <p class="home-org-structure__descr">{{ org_structure_preview.body }}</p>
               <a href="{% url 'webapp:org_structure' %}" class="link-btn">{% trans 'Read more' %}</a>
             </div>
           </div>
           <div class="col-12 col-lg-7">
-            <div class="home-org-structure__list">
-              <div class="row">
-                <div class="col-12 col-md-6">
-                  <div class="home-org-structure__item">
-                    <span class="home-org-structure__item-num">1</span>
-                    <span class="home-org-structure__item-label">Central office</span>
-                  </div>
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="home-org-structure__item">
+                  <span class="home-org-structure__item-num">1</span>
+                  <span class="home-org-structure__item-label">{% trans 'Advisory Committee' %}</span>
                 </div>
-                <div class="col-12 col-md-6">
-                  <div class="home-org-structure__item">
-                    <span class="home-org-structure__item-num">2</span>
-                    <span class="home-org-structure__item-label">International liaison department</span>
-                  </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="home-org-structure__item">
+                  <span class="home-org-structure__item-num">2</span>
+                  <span class="home-org-structure__item-label">{% trans 'Experts Committee' %}</span>
                 </div>
-                <div class="col-12 col-md-6">
-                  <div class="home-org-structure__item">
-                    <span class="home-org-structure__item-num">3</span>
-                    <span class="home-org-structure__item-label">Medical education division</span>
-                  </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="home-org-structure__item">
+                  <span class="home-org-structure__item-num">3</span>
+                  <span class="home-org-structure__item-label">{% trans 'Administrative Council' %}</span>
                 </div>
-                <div class="col-12 col-md-6">
-                  <div class="home-org-structure__item">
-                    <span class="home-org-structure__item-num">4</span>
-                    <span class="home-org-structure__item-label">International medical cooperation department</span>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="home-org-structure__item">
-                    <span class="home-org-structure__item-num">5</span>
-                    <span class="home-org-structure__item-label">Health management division</span>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="home-org-structure__item">
-                    <span class="home-org-structure__item-num">6</span>
-                    <span class="home-org-structure__item-label">Telemedicine division</span>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="home-org-structure__item">
-                    <span class="home-org-structure__item-num">7</span>
-                    <span class="home-org-structure__item-label">Pharmaceutical industry division</span>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="home-org-structure__item">
-                    <span class="home-org-structure__item-num">8</span>
-                    <span class="home-org-structure__item-label">Medical tourism division</span>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="home-org-structure__item">
-                    <span class="home-org-structure__item-num">9</span>
-                    <span class="home-org-structure__item-label">Cross-border medical division</span>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="home-org-structure__item">
-                    <span class="home-org-structure__item-num">10</span>
-                    <span class="home-org-structure__item-label">International Exhibition Department</span>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="home-org-structure__item">
-                    <span class="home-org-structure__item-num">11</span>
-                    <span class="home-org-structure__item-label">Finance department</span>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="home-org-structure__item">
-                    <span class="home-org-structure__item-num">12</span>
-                    <span class="home-org-structure__item-label">Ministry of information technology</span>
-                  </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="home-org-structure__item">
+                  <span class="home-org-structure__item-num">4</span>
+                  <span class="home-org-structure__item-label">{% trans 'Permanent Establishment' %}</span>
                 </div>
               </div>
             </div>

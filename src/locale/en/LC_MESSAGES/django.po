@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-27 16:25+0000\n"
+"POT-Creation-Date: 2022-02-08 17:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,27 +38,52 @@ msgstr "Frequently Asked Questions"
 msgid "About center"
 msgstr "About center"
 
-#: templates/webapp/cooperation.html:7 templates/webapp/partial/header.html:52
-msgid "Cooperation and exchange"
-msgstr "Cooperation and exchange"
-
-#: templates/webapp/index.html:13 templates/webapp/partial/footer.html:10
+#: templates/webapp/base.html:13 templates/webapp/index.html:13
+#: templates/webapp/partial/footer.html:10
 #: templates/webapp/partial/header.html:33
 msgid "International Medical Cooperation Center for the Belt and Road"
 msgstr "International Medical Cooperation Center for the Belt and Road"
 
-#: templates/webapp/index.html:35 templates/webapp/org-structure.html:7
+#: templates/webapp/contacts.html:7 templates/webapp/partial/footer.html:16
+msgid "Contacts"
+msgstr "Contacts"
+
+#: templates/webapp/cooperation.html:7 templates/webapp/partial/header.html:52
+msgid "Cooperation and exchange"
+msgstr "Cooperation and exchange"
+
+#: templates/webapp/index.html:29 templates/webapp/org-structure.html:7
 msgid "Organization structure"
 msgstr "Organization structure"
 
-#: templates/webapp/index.html:38 templates/webapp/index.html:119
+#: templates/webapp/index.html:31 templates/webapp/index.html:62
 msgid "Read more"
 msgstr "Read more"
 
-#: templates/webapp/index.html:130 templates/webapp/partial/header.html:53
+#: templates/webapp/index.html:39
+msgid "Advisory Committee"
+msgstr "Advisory Committee"
+
+#: templates/webapp/index.html:45
+msgid "Experts Committee"
+msgstr "Experts Committee"
+
+#: templates/webapp/index.html:51
+msgid "Administrative Council"
+msgstr "Administrative Council"
+
+#: templates/webapp/index.html:57
+msgid "Permanent Establishment"
+msgstr "Permanent Establishment"
+
+#: templates/webapp/index.html:73 templates/webapp/partial/header.html:53
 #: templates/webapp/photo-album-list.html:6
 msgid "Multimedia"
 msgstr "Multimedia"
+
+#: templates/webapp/links.html:7 templates/webapp/partial/footer.html:17
+msgid "Links"
+msgstr "Useful links"
 
 #: templates/webapp/news/home-news-section.html:45
 #: templates/webapp/news/home-news-section.html:99
@@ -73,14 +98,6 @@ msgstr "News"
 #: templates/webapp/partial/footer.html:15
 msgid "Faq"
 msgstr "Faq"
-
-#: templates/webapp/partial/footer.html:16
-msgid "Contacts"
-msgstr "Contacts"
-
-#: templates/webapp/partial/footer.html:17
-msgid "Links"
-msgstr "Links"
 
 #: templates/webapp/partial/footer.html:25
 msgid "All rights reserved"
