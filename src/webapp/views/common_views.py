@@ -1,3 +1,6 @@
+from itertools import chain
+from django.utils.http import urlencode
+
 from django.views.generic import TemplateView, ListView, DetailView
 
 from core.settings import PAGINATION_COUNT
@@ -94,4 +97,33 @@ class LinksPageView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['links'] = LinksPage.objects.first()
+        return context
+
+
+class SearchResultsView(ListView):
+    template_name = 'webapp/search-results.html'
+    context_object_name = 'search_results'
+    paginate_by = PAGINATION_COUNT
+
+    def __init__(self):
+        super().__init__()
+        self.query = None
+
+    def get_queryset(self):
+        self.query = self.request.GET.get('q')
+        if self.query and len(self.query) >= 2:
+            news = News.objects.filter(title__icontains=self.query).order_by('-created_at')
+            photoalbums = PhotoAlbum.objects.filter(title__icontains=self.query).order_by('-created_at')
+            for n in news:
+                n.model_type = 'news'
+            for photoalbum in photoalbums:
+                photoalbum.model_type = 'photo'
+
+            return list(chain(news, photoalbums))
+        return News.objects.none()
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        if self.query:
+            context['query'] = urlencode({'q': self.query})
         return context

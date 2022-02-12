@@ -17,4 +17,5 @@ urlpatterns = [
     path('faq', views.FAQPageView.as_view(), name='faq'),
     path('contacts', views.ContactsPageView.as_view(), name='contacts'),
     path('links', views.LinksPageView.as_view(), name='links'),
+    path('search/', views.SearchResultsView.as_view(), name='search_results'),
 ]

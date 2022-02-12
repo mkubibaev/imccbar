@@ -33,9 +33,9 @@
         <span class="logo__title">{% trans 'International Medical Cooperation Center for the Belt and Road' %}</span>
       </a>
       <div class="search-form">
-        <form method="get">
+        <form method="get" action="{% url 'webapp:search_results' %}">
           <div class="search-inp">
-            <input name="q" type="text">
+            <input name="q" type="text" minlength="2">
             <button type="submit"></button>
           </div>
         </form>
@@ -55,9 +55,9 @@
     </ul>
     <div class="menu-btn not-active" id="menu-btn"><span></span></div>
     <div class="search-form">
-      <form method="get">
+      <form method="get" action="{% url 'webapp:search_results' %}">
         <div class="search-inp">
-          <input name="q" type="text">
+          <input name="q" type="text" minlength="2">
           <button type="submit"></button>
         </div>
       </form>
