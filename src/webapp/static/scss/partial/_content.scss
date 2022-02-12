@@ -2,10 +2,15 @@ html {
   height: 100%;
 }
 
+li {
+  margin-bottom: 5px;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background: #fff;
   font-size: 16px;
+  line-height: 1.5;
   height: 100%;
 }
 
@@ -112,7 +117,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  &--photogallery {
+  &--photogallery, &--video {
     .news-card__img {
       position: relative;
       &::after {
@@ -131,6 +136,11 @@ body {
     }
     .news-card__body {
       border: 1px solid #eee;
+    }
+  }
+  &--video {
+    .news-card__img::after {
+      background-image: url('../img/camera-video.svg');
     }
   }
 

@@ -1,0 +1,110 @@
+[
+{
+  "model": "webapp.aboutcenterpage",
+  "pk": 1,
+  "fields": {
+    "body": "<p style=\"text-align:justify\"><span style=\"font-size:16pt\"><strong>Preface</strong></span></p>\r\n\r\n<p style=\"text-align:justify\">The People&#39;s Republic of China constructs &quot;healthy Silk Road&quot; and builds up &quot;community of common health for all mankind&quot; with dignitaries, leaders of relevant institutions, experts and scholars from countries along the Belt and Road, according to the Joint Communique of Round Table Summit under Belt and Road International Cooperation Summit Forum, which will serve the people of all countries in Central Asia and the countries along the Belt and Road.</p>",
+    "body_en": "<p style=\"text-align:justify\"><span style=\"font-size:16pt\"><strong>Preface</strong></span></p>\r\n\r\n<p style=\"text-align:justify\">The People&#39;s Republic of China constructs &quot;healthy Silk Road&quot; and builds up &quot;community of common health for all mankind&quot; with dignitaries, leaders of relevant institutions, experts and scholars from countries along the Belt and Road, according to the Joint Communique of Round Table Summit under Belt and Road International Cooperation Summit Forum, which will serve the people of all countries in Central Asia and the countries along the Belt and Road.</p>",
+    "body_ru": "<p style=\"text-align:justify\"><span style=\"font-size:18px\"><strong>Предисловие</strong></span></p>\r\n\r\n<p style=\"text-align:justify\">Согласно совместному коммюнике саммита за круглым столом Форума по международному сотрудничеству &laquo;Один пояс, один путь&raquo;, Китайская Народная Республика совместно с политическими деятелями, руководителями соответствующих учреждений, специалистами и учеными из стран вдоль &laquo;Пояса и пути&raquo;, достигла консенсуса по строительству &laquo;здорового Шелкового пути&raquo; и созданию &laquo;Сообщества единого здравоохранения человечества&raquo;, чтобы обеспечивать жизнь и здоровье народам стран Центральной Азии и стран вдоль &laquo;Пояса и пути&raquo;.</p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:18px\"><strong>Руководящая идея</strong></span></p>\r\n\r\n<p style=\"text-align:justify\">Развивая &laquo;Шанхайский дух&raquo; &laquo;совместного обсуждения, совместного строительства и взаимного выигрыша&raquo;, создать &laquo;здоровый Шелковый путь&raquo; и построить &laquo;Сообщество единого здравоохранения человечества&raquo;.</p>",
+    "body_zh_cn": "<p style=\"text-align:justify\"><span style=\"font-size:16pt\"><strong>前言</strong></span></p>\r\n\r\n<p style=\"text-align:justify\">依据一带一路国际合作高峰论坛圆桌峰会联合公报，由中华人民共和国联合一带一路沿线国家各国政要、相关机构领导及专家学者达成的共识，打造&ldquo;健康丝绸之路&rdquo;，构建&ldquo;人类卫生健康共同体&rdquo;，为中亚各国及一带一路沿线国家人民生命健康服务</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:16pt\"><strong>指导思想</strong></span></p>\r\n\r\n<p style=\"text-align:justify\">弘扬&ldquo;共商、共建、共赢&rdquo;的&ldquo;上海精神&rdquo;，打造&ldquo;健康 丝绸之路&rdquo;，构建&ldquo;人类卫生健康共同体&rdquo;。</p>",
+    "created_at": "2022-01-17T05:24:37.535Z",
+    "updated_at": "2022-02-12T13:28:09.616Z"
+  }
+},
+{
+  "model": "webapp.aboutcenterpreview",
+  "pk": 1,
+  "fields": {
+    "body": "The People's Republic of China constructs \"healthy Silk Road\" and builds up \"community of common health for all mankind\" with dignitaries, leaders of relevant institutions, experts and scholars from countries along the Belt and Road, according to the Joint Communique of Round Table Summit under Belt and Road International Cooperation Summit Forum, which will serve the people of all countries in Central Asia and the countries along the Belt and Road.",
+    "body_en": "The People's Republic of China constructs \"healthy Silk Road\" and builds up \"community of common health for all mankind\" with dignitaries, leaders of relevant institutions, experts and scholars from countries along the Belt and Road, according to the Joint Communique of Round Table Summit under Belt and Road International Cooperation Summit Forum, which will serve the people of all countries in Central Asia and the countries along the Belt and Road.",
+    "body_ru": "Согласно совместному коммюнике саммита за круглым столом Форума по международному сотрудничеству \"Один пояс, один путь\", Китайская Народная Республика совместно с политическими деятелями, руководителями соответствующих учреждений, специалистами и учеными из стран вдоль \"Пояса и пути\", достигла консенсуса по строительству \"здорового Шелкового пути\" и созданию \"Сообщества единого здравоохранения человечества\", чтобы обеспечивать жизнь и здоровье народам стран Центральной Азии и стран вдоль \"Пояса и пути\".",
+    "body_zh_cn": "依据一带一路国际合作高峰论坛圆桌峰会联合公报，由中华人民共和国联合一带一路沿线国家各国政要、相关机构领导及专家学者达成的共识，打造“健康丝绸之路”，构建“人类卫生健康共同体”，为中亚各国及一带一路沿线国家人民生命健康服务。",
+    "created_at": "2022-02-08T17:41:31.100Z",
+    "updated_at": "2022-02-08T17:42:59.082Z"
+  }
+},
+{
+  "model": "webapp.orgstructurepage",
+  "pk": 1,
+  "fields": {
+    "body": "<p style=\"text-align:justify\">we</p>",
+    "body_en": "<p style=\"text-align:justify\">we</p>",
+    "body_ru": "<p style=\"text-align:justify\">&quot;Центр&quot; был инициирован странами Центральной Азии при поддержке соответствующих китайских учреждений и совместном участии стран-членов ШОС и стран вдоль &quot;Пояса и пути&quot;, при этом во всех странах были созданы рабочие аппараты.</p>\r\n\r\n<p style=\"text-align:justify\">Под руководством Консультативного комитета, Экспертной комиссии и Руководящего органа продвигается международное медицинское сотрудничество в Центральной Азии и странах вдоль &quot;Пояса и пути&quot;, чтобы предоставлять стратегические рекомендации и проекты реализации в области медицины и здравоохранения для национальных служб управления здравоохранением, а также в полной мере использовать взаимодополняющие преимущества в соответствии с собственными потребностями каждой страны и прагматично осуществлять международное медицинское сотрудничество.</p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-size:18px\">Cостав Консультативного комитета:</span></strong></p>\r\n\r\n<ul>\r\n\t<li style=\"text-align:justify\">Почетный председатель: Государственные политические деятели (нынешние или некогда исполнявшие обязанности)</li>\r\n\t<li style=\"text-align:justify\">Действующий председатель: первый председатель назначается страной-инициатором</li>\r\n\t<li style=\"text-align:justify\">Председатели стран: видные политические деятели из Центральной Азии, Кавказа и других стран вдоль &laquo;Пояса и пути&raquo; (нынешние или некогда исполнявшие обязанности)</li>\r\n\t<li style=\"text-align:justify\">Заместители председателя и члены комитета: руководители соответствующих департаментов правительств различных стран (нынешние или некогда исполнявшие обязанности)</li>\r\n</ul>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-size:18px\">Cостав Комитета экспертов:</span></strong></p>\r\n\r\n<ul>\r\n\t<li style=\"text-align:justify\">Почетный председатель: всемирно известный деятель науки</li>\r\n\t<li style=\"text-align:justify\">Председатель: первый председатель рекомендуется страной-инициатором.</li>\r\n\t<li style=\"text-align:justify\">Заместители председателя и члены комитета: известные ученые в области медицины и профильных специализаций из разных стран.</li>\r\n</ul>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-size:18px\">Cостав Руководящего органа:</span></strong></p>\r\n\r\n<ul>\r\n\t<li style=\"text-align:justify\">Генеральный директор &rdquo;Центра&quot; по совместительству является председателем Руководящего органа</li>\r\n\t<li style=\"text-align:justify\">Совместные больницы, производственные и непроизводственные учреждения фармацевтики и медицинской аппаратуры и инструментов в различных странах</li>\r\n</ul>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-size:18px\">Cостав Постоянного органа:</span></strong></p>\r\n\r\n<ul>\r\n\t<li style=\"text-align: justify;\">Генеральный директор отвечает за административную работу Постоянного органа, а за выполнение конкретной работы отвечают департамент и различные делопроизводственные отделы, &ldquo;Центр&rdquo; создал рабочие аппараты в различных странах.</li>\r\n</ul>",
+    "body_zh_cn": "<p style=\"text-align:justify\">中心&rdquo;由中亚国家发起，在中国相关机构的支持下由上合组织成员国和一带一路沿线国家共同参与，并在各国设立办事机构。在顾问委员会、专家委员会和理事会的指导下，在中亚及一带一路沿线国家推进国际医疗合作，为各国卫生行政部门提供医疗卫生健康决策建议和实施方案，并充分按照各国自身需要优势互补，务实开展国际医疗合作。</p>",
+    "created_at": "2022-01-17T08:56:08.683Z",
+    "updated_at": "2022-02-12T13:26:27.976Z"
+  }
+},
+{
+  "model": "webapp.orgstructurepreview",
+  "pk": 1,
+  "fields": {
+    "body": "The center is launched by Central Asian countries, and SCO member countries and countries along the Belt and Road participated in the center, with support of the relevant agencies in China. Offices have been set up in memeber countries.",
+    "body_en": "The center is launched by Central Asian countries, and SCO member countries and countries along the Belt and Road participated in the center, with support of the relevant agencies in China. Offices have been set up in memeber countries.",
+    "body_ru": "\"Центр\" был инициирован странами Центральной Азии при поддержке соответствующих китайских учреждений и совместном участии стран-членов ШОС и стран вдоль \"Пояса и пути»\" при этом во всех странах были созданы рабочие аппараты.",
+    "body_zh_cn": "“中心”由中亚国家发起，在中国相关机构的支持下由上合组织成员国和一带一路沿线国家共同参与，并在各国设立办事机构。",
+    "created_at": "2022-02-08T17:34:51.729Z",
+    "updated_at": "2022-02-08T17:34:51.729Z"
+  }
+},
+{
+  "model": "webapp.cooperationpage",
+  "pk": 1,
+  "fields": {
+    "body": "<p>asfasdf</p>",
+    "body_en": "<p>asfasdf</p>",
+    "body_ru": "<p>asdfasdf</p>",
+    "body_zh_cn": "<p>asdfasdf</p>",
+    "created_at": "2022-02-08T18:04:06.918Z",
+    "updated_at": "2022-02-08T18:04:06.918Z"
+  }
+},
+{
+  "model": "webapp.servicespage",
+  "pk": 1,
+  "fields": {
+    "body": "<p>Some text in english ...</p>",
+    "body_en": "<p>Some text in english ...</p>",
+    "body_ru": "<p>Some text in russian ...</p>",
+    "body_zh_cn": "<p>Some text in chinese ...</p>",
+    "created_at": "2022-01-27T16:12:39.798Z",
+    "updated_at": "2022-01-27T16:13:28.157Z"
+  }
+},
+{
+  "model": "webapp.faqpage",
+  "pk": 1,
+  "fields": {
+    "body": "<p>ae wfasdf&nbsp;</p>",
+    "body_en": "<p>ae wfasdf&nbsp;</p>",
+    "body_ru": "<p>asd fasdf</p>",
+    "body_zh_cn": "<p>asd fasdf</p>",
+    "created_at": "2022-02-08T18:03:38.398Z",
+    "updated_at": "2022-02-08T18:03:38.398Z"
+  }
+},
+{
+  "model": "webapp.contactspage",
+  "pk": 1,
+  "fields": {
+    "body": "<p>E RQWER QW R</p>",
+    "body_en": "<p>E RQWER QW R</p>",
+    "body_ru": "<p>ASD FASD</p>",
+    "body_zh_cn": "<p>asdf asd fas d</p>",
+    "created_at": "2022-01-27T16:39:17.459Z",
+    "updated_at": "2022-01-27T16:39:17.459Z"
+  }
+},
+{
+  "model": "webapp.linkspage",
+  "pk": 1,
+  "fields": {
+    "body": "<p><a href=\"http://eng.sectsco.org/\" target=\"_blank\">The Shanghai cooperation organisation</a></p>",
+    "body_en": "<p><a href=\"http://eng.sectsco.org/\" target=\"_blank\">The Shanghai cooperation organisation</a></p>",
+    "body_ru": "<p><a href=\"http://rus.sectsco.org/\" target=\"_blank\">Шанхайская организация сотрудничества</a></p>",
+    "body_zh_cn": "<p><a href=\"http://chn.sectsco.org/\" target=\"_blank\">上海合作组织</a></p>",
+    "created_at": "2022-02-08T18:01:09.953Z",
+    "updated_at": "2022-02-08T18:03:06.827Z"
+  }
+}
+]

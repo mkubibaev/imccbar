@@ -1,0 +1,20 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+  <div class="container">
+    <div class="detail-page">
+      <h1 class="section-title">{{ video_item.title }}</h1>
+      <video id="media-video"
+             class="video-js"
+             controls
+             preload="auto"
+             width="100%"
+             height="auto"
+             poster="{{ video_item.thumbnail.url }}"
+             data-setup="{}"
+      >
+        <source src="{{ video_item.file.url }}" />
+      </video>
+    </div>
+  </div>
+{% endblock %}

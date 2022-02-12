@@ -2,7 +2,8 @@ from django.contrib import admin
 from django.utils.safestring import mark_safe
 from modeltranslation.admin import TranslationAdmin
 from webapp.models import News, AboutCenterPage, OrgStructurePage, PhotoAlbum, PhotoAlbumImage, \
-    CooperationPage, ServicesPage, FAQPage, ContactsPage, LinksPage, AboutCenterPreview, OrgStructurePreview
+    CooperationPage, ServicesPage, FAQPage, ContactsPage, LinksPage, AboutCenterPreview,\
+    OrgStructurePreview, VideoItem
 
 
 class BaseAdmin(TranslationAdmin):
@@ -32,6 +33,7 @@ admin.site.register(FAQPage, BaseAdmin)
 admin.site.register(ContactsPage, BaseAdmin)
 admin.site.register(LinksPage, BaseAdmin)
 admin.site.register(PhotoAlbum, BaseAdmin)
+admin.site.register(VideoItem, BaseAdmin)
 admin.site.register(PhotoAlbumImage, PhotoAlbumImageAdmin)
 admin.site.register(AboutCenterPreview, BaseAdmin)
 admin.site.register(OrgStructurePreview, BaseAdmin)

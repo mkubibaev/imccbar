@@ -1,11 +1,14 @@
 from itertools import chain
+from operator import attrgetter
+
 from django.utils.http import urlencode
 
 from django.views.generic import TemplateView, ListView, DetailView
 
 from core.settings import PAGINATION_COUNT
 from webapp.models import News, AboutCenterPage, OrgStructurePage, PhotoAlbum, PhotoAlbumImage, \
-    CooperationPage, ServicesPage, FAQPage, ContactsPage, LinksPage, AboutCenterPreview, OrgStructurePreview
+    CooperationPage, ServicesPage, FAQPage, ContactsPage, LinksPage, AboutCenterPreview, \
+    OrgStructurePreview, VideoItem
 
 
 class HomeView(TemplateView):
@@ -41,18 +44,29 @@ class OrgStructurePageView(TemplateView):
         return context
 
 
-class PhotoGalleryListView(ListView):
-    model = PhotoAlbum
-    context_object_name = 'album_list'
-    template_name = 'webapp/photo-album-list.html'
+class MultimediaView(ListView):
+    context_object_name = 'media_list'
     ordering = ['-created_at']
+    template_name = 'webapp/multimedia-list.html'
     paginate_by = PAGINATION_COUNT
+
+    def get_queryset(self):
+        photo_albums = PhotoAlbum.objects.all()
+        videos = VideoItem.objects.all()
+        result_list = chain(photo_albums, videos)
+        return sorted(result_list, key=attrgetter('created_at'), reverse=True)
 
 
 class PhotoGalleryDetailView(DetailView):
     model = PhotoAlbum
     context_object_name = 'album'
     template_name = 'webapp/photo-album-detail.html'
+
+
+class VideDetailView(DetailView):
+    model = VideoItem
+    context_object_name = 'video_item'
+    template_name = 'webapp/video-detail.html'
 
 
 class CooperationPageView(TemplateView):

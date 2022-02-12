@@ -163,7 +163,7 @@ CKEDITOR_CONFIGS = {
             {'name': 'styles', 'items': ['FontSize']},
             {'name': 'colors', 'items': ['TextColor', 'BGColor']},
             {'name': 'insert', 'items': ['Image']},
-            {'name': 'document', 'items': ['Source']},
+            {'name': 'document', 'items': ['Maximize', 'Source']},
         ],
     }
 }

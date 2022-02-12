@@ -1,0 +1,42 @@
+{% extends 'webapp/base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <div class="container">
+    <h1 class="section-title">{% trans 'Multimedia' %}</h1>
+    <div class="row">
+      {% for media_item in media_list %}
+        <div class="col-12 col-lg-4">
+          {% if media_item.get_media_type == 'photo' %}
+            <div class="news-card news-card--photogallery">
+              <a href="{% url 'webapp:album_detail' media_item.pk %}" class="news-card__img">
+                <img src="{{ media_item.thumbnail.url }}" alt="{{ media_item.title }}">
+              </a>
+              <div class="news-card__body">
+                <h3 class="news-card__title">
+                  <a href="{% url 'webapp:album_detail' media_item.pk %}">{{ media_item.title }}</a>
+                </h3>
+                <span class="news-card__date">{{ media_item.created_at | date:'Y / m / d' }}</span>
+              </div>
+            </div>
+          {% elif media_item.get_media_type == 'video' %}
+            <div class="news-card news-card--video">
+              <a href="{% url 'webapp:video_detail' media_item.pk %}" class="news-card__img">
+                <img src="{{ media_item.thumbnail.url }}" alt="{{ media_item.title }}">
+              </a>
+              <div class="news-card__body">
+                <h3 class="news-card__title">
+                  <a href="{% url 'webapp:video_detail' media_item.pk %}">{{ media_item.title }}</a>
+                </h3>
+                <span class="news-card__date">{{ media_item.created_at | date:'Y / m / d' }}</span>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    {% if is_paginated %}
+      {% include 'webapp/partial/pagination.html' %}
+    {% endif %}
+  </div>
+{% endblock %}

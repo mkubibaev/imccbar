@@ -80,5 +80,10 @@
       --delete-button-hover-bg: #a41515;
   }
 }
+
+.required label::after, label.required::after {
+    content: "*";
+    color: var(--error-fg);
+}
 </style>
 {% endblock %}

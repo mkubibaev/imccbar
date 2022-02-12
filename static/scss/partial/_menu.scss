@@ -1,0 +1,115 @@
+.main-nav {
+  min-height: 60px;
+  background: $main-blue;
+  .container {
+    position: relative;
+    @include md_max {
+      padding-right: 0;
+    }
+  }
+
+  &__list {
+    min-height: 60px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include lg_max {
+      display: none;
+      position: absolute;
+      min-height: 0;
+      right: 0px;
+      top: 60px;
+      width: 100%;
+      padding: 10px 15px;
+      z-index: 101;
+      background: $dark-blue;
+    }
+    @include lg_min {
+      display: flex !important
+    }
+    li {
+      @include lg-max {
+        display: block;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        text-align: center;
+      }
+      a {
+        display: block;
+        line-height: 60px;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 15px;
+        color: #fff;
+        &:hover {
+          text-decoration: none;
+        }
+        @include lg-max {
+          line-height: 56px;
+        }
+      }
+    }
+  }
+  .search-form {
+    padding-top: 10px;
+    @include lg_min {
+      display: none;
+    }
+  }
+  .menu-btn {
+    @include lg_max {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      background: $dark-blue;
+
+      span {
+        @include lg_max {
+          display: block;
+          width: 22px;
+          height: 2px;
+          background: #fff;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin: -1px 0 0 -11px;
+          &::before, &::after {
+            content: "";
+            position: absolute;
+            top: -7px;
+            left: 0;
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: #fff;
+            transition: all 0.2s;
+          }
+          &::after {
+            top: 7px;
+          }
+        }
+      }
+      &.is-active {
+        span {
+          @include lg_max {
+            background: transparent;
+            &::before {
+              transform: rotate(45deg);
+              top: 0;
+            }
+            &::after {
+              transform: rotate(-45deg);
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

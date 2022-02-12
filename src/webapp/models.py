@@ -1,5 +1,5 @@
 from django.db import models
-from django.core.validators import validate_image_file_extension
+from django.core.validators import validate_image_file_extension, FileExtensionValidator
 from ckeditor_uploader.fields import RichTextUploadingField
 from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFill
@@ -89,8 +89,11 @@ class PhotoAlbum(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        verbose_name = 'Multimedia gallery'
-        verbose_name_plural = 'Multimedia galleries'
+        verbose_name = 'Multimedia photo album'
+        verbose_name_plural = 'Multimedia photo albums'
+
+    def get_media_type(self):
+        return 'photo'
 
     def __str__(self):
         return self.title[:30]
@@ -114,6 +117,32 @@ class PhotoAlbumImage(models.Model):
 
     def __str__(self):
         return 'Multimedia photo'
+
+
+class VideoItem(models.Model):
+    title = models.CharField(max_length=255)
+    poster = models.ImageField(upload_to='uploads/video/posters/%Y/%m',
+                               validators=[validate_image_file_extension])
+    thumbnail = ImageSpecField(source='poster',
+                               processors=[ResizeToFill(825, 480)],
+                               format='JPEG',
+                               options={'quality': 100})
+    file = models.FileField(
+        upload_to='uploads/video/%Y/%m',
+        validators=[FileExtensionValidator(allowed_extensions=['mp4', 'mkv'])]
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Multimedia video'
+        verbose_name_plural = 'Multimedia videos'
+
+    def get_media_type(self):
+        return 'video'
+
+    def __str__(self):
+        return self.title
 
 
 class CooperationPage(models.Model):

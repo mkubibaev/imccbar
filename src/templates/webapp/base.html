@@ -11,10 +11,10 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{% trans 'International Medical Cooperation Center for the Belt and Road' %}</title>
+  {% block css %}{% endblock %}
   <link rel="stylesheet" href="{% static '/css/bootstrap-reboot.css' %}">
   <link rel="stylesheet" href="{% static '/css/bootstrap-grid.css' %}">
   <link rel="stylesheet" href="{% static '/css/fonts.css' %}">
-  <link rel="stylesheet" href="{% static '/css/jquery.fancybox.min.css' %}">
   <link rel="stylesheet" href="{% static '/css/main.css' %}">
   <link rel="icon" href="{% static '/img/logo.png' %}" type="image/x-png">
 </head>
@@ -30,7 +30,7 @@
 </div>
 
   <script src="{% static '/js/jquery-3.6.0.min.js'%}"></script>
-  <script src="{% static '/js/jquery.fancybox.min.js'%}"></script>
+  {% block js %}{% endblock %}
   <script src="{% static '/js/main.js' %}"></script>
 </body>
 </html>
