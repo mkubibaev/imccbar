@@ -128,12 +128,14 @@ class SearchResultsView(ListView):
         if self.query and len(self.query) >= 2:
             news = News.objects.filter(title__icontains=self.query).order_by('-created_at')
             photoalbums = PhotoAlbum.objects.filter(title__icontains=self.query).order_by('-created_at')
+            videos = VideoItem.objects.filter(title__icontains=self.query).order_by('-created_at')
             for n in news:
                 n.model_type = 'news'
             for photoalbum in photoalbums:
                 photoalbum.model_type = 'photo'
-
-            return list(chain(news, photoalbums))
+            for video in videos:
+                video.model_type = 'video'
+            return list(chain(news, photoalbums, videos))
         return News.objects.none()
 
     def get_context_data(self, **kwargs):

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-08 17:44+0000\n"
+"POT-Creation-Date: 2022-02-12 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,8 +75,9 @@ msgstr "理事会"
 msgid "Permanent Establishment"
 msgstr "常设机构"
 
-#: templates/webapp/index.html:73 templates/webapp/partial/header.html:53
-#: templates/webapp/photo-album-list.html:6
+#: templates/webapp/index.html:73 templates/webapp/multimedia-list.html:6
+#: templates/webapp/partial/header.html:53
+#: templates/webapp/search-results.html:18
 msgid "Multimedia"
 msgstr "多媒体"
 
@@ -91,6 +92,7 @@ msgstr "所有新闻"
 
 #: templates/webapp/news/home-news-section.html:52
 #: templates/webapp/news/news-list.html:6
+#: templates/webapp/search-results.html:14
 msgid "News"
 msgstr "新闻"
 
@@ -113,3 +115,11 @@ msgstr "新闻事件"
 #: templates/webapp/partial/header.html:54 templates/webapp/services.html:7
 msgid "Platform services"
 msgstr "平台服务"
+
+#: templates/webapp/search-results.html:7
+msgid "Search results"
+msgstr "搜索结果"
+
+#: templates/webapp/search-results.html:40
+msgid "No matches found"
+msgstr "未找到匹配项"

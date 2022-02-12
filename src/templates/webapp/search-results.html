@@ -10,12 +10,12 @@
         {% regroup search_results by model_type as results %}
         {% for type in results %}
           {% if type.grouper == 'news' %}
-            <div class="section-head mb-2">
-              <h2 class="section-title">{% trans 'News' %}</h2>
+            <div class="mb-3">
+              <h3>{% trans 'News' %}</h3>
             </div>
-          {% elif type.grouper == 'photo' %}
-            <div class="section-head mb-2">
-              <h2 class="section-title">{% trans 'Multimedia' %}</h2>
+          {% elif type.grouper == 'photo' or type.grouper == 'video' %}
+            <div class="mb-3">
+              <h3>{% trans 'Multimedia' %}</h3>
             </div>
           {% endif %}
           <div class="mb-4">
@@ -27,6 +27,10 @@
               {% elif type.grouper == 'photo' %}
                 <div class="mb-2">
                   <a href="{% url 'webapp:album_detail' result.pk %}">{{ result.title }}</a>
+                </div>
+              {% elif type.grouper == 'video' %}
+                <div class="mb-2">
+                  <a href="{% url 'webapp:video_detail' result.pk %}">{{ result.title }}</a>
                 </div>
               {% endif %}
             {% endfor %}
