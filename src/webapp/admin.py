@@ -11,6 +11,10 @@ class BaseAdmin(TranslationAdmin):
     readonly_fields = ('created_at', 'updated_at')
 
 
+class BaseAdminDate(BaseAdmin):
+    list_display = ('title', 'created_at',)
+
+
 class SinglePageAdmin(BaseAdmin):
     def has_add_permission(self, request):
         return False
@@ -32,7 +36,7 @@ class PhotoAlbumImageAdmin(admin.ModelAdmin):
     get_image.short_description = 'Photo'
 
 
-admin.site.register(News, BaseAdmin)
+admin.site.register(News, BaseAdminDate)
 admin.site.register(AboutCenterPage, SinglePageAdmin)
 admin.site.register(OrgStructurePage, SinglePageAdmin)
 admin.site.register(CooperationPage, SinglePageAdmin)
@@ -40,8 +44,8 @@ admin.site.register(ServicesPage, SinglePageAdmin)
 admin.site.register(FAQPage, SinglePageAdmin)
 admin.site.register(ContactsPage, SinglePageAdmin)
 admin.site.register(LinksPage, SinglePageAdmin)
-admin.site.register(PhotoAlbum, BaseAdmin)
-admin.site.register(VideoItem, BaseAdmin)
+admin.site.register(PhotoAlbum, BaseAdminDate)
+admin.site.register(VideoItem, BaseAdminDate)
 admin.site.register(PhotoAlbumImage, PhotoAlbumImageAdmin)
 admin.site.register(AboutCenterPreview, SinglePageAdmin)
 admin.site.register(OrgStructurePreview, SinglePageAdmin)

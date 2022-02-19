@@ -3035,6 +3035,16 @@ body {
   margin-left: 15px;
 }
 
+.map {
+  height: 400px;
+}
+
+@media (max-width: 576px) {
+  .map {
+    height: 300px;
+  }
+}
+
 .pagination {
   display: flex;
   padding-left: 0;

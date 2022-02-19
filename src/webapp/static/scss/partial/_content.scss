@@ -544,3 +544,9 @@ body {
   }
 
 }
+.map {
+  height: 400px;
+  @include sm_max {
+    height: 300px;
+  }
+}

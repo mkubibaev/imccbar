@@ -1,6 +1,6 @@
 from modeltranslation.translator import register, TranslationOptions
 from webapp.models import News, AboutCenterPage, OrgStructurePage, PhotoAlbum, \
-    CooperationPage, ServicesPage, FAQPage, ContactsPage, LinksPage, AboutCenterPreview,\
+    CooperationPage, ServicesPage, FAQPage, ContactsPage, LinksPage, AboutCenterPreview, \
     OrgStructurePreview, VideoItem
 
 
@@ -43,7 +43,6 @@ class PhotoAlbumTranslationOptions(TranslationOptions):
 @register(VideoItem)
 class VideoItemTranslationOptions(TranslationOptions):
     fields = ('title', 'file')
-    required_languages = {'en': ('title', 'file'), 'default': ('title',)}
 
 
 @register(CooperationPage)
@@ -74,4 +73,3 @@ class ContactsPageTranslationOptions(TranslationOptions):
 class LinksPageTranslationOptions(TranslationOptions):
     fields = ('body',)
     required_languages = ('zh-cn', 'ru', 'en')
-

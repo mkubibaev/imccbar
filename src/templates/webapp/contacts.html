@@ -1,11 +1,43 @@
 {% extends 'webapp/base.html' %}
 {% load i18n %}
+{% load static %}
 
 {% block content %}
   <div class="container">
-    <div class="detail-page">
-      <h1 class="section-title">{% trans 'Contacts' %}</h1>
-      {{ contacts.body | safe }}
+    <h1 class="section-title">{% trans 'Contacts' %}</h1>
+    {{ contacts.body | safe }}
+    <div class="pt-3">
+      <div class="map" id="map"></div>
     </div>
   </div>
+{% endblock %}
+
+{% block js %}
+  <script src="https://api-maps.yandex.ru/2.1/?lang={{ LANG }}" type="text/javascript"></script>
+  <script>
+    ymaps.ready(init);
+
+    function init() {
+      const myMap = new ymaps.Map("map", {
+        center: [42.868, 74.604],
+        zoom: 14,
+        controls: ['zoomControl'],
+        behaviors: ['drag', 'multiTouch']
+      });
+
+      const placeMark = new ymaps.Placemark([42.868569, 74.604429], {
+            balloonContent: '{% trans 'International Medical Cooperation Center for the Belt and Road' %}',
+          },
+          {
+            iconLayout: 'default#image',
+            iconImageHref: '{% static 'img/imcc-marker.png' %}',
+            hideIconOnBalloonOpen: false,
+            iconImageSize: [48, 60],
+            iconImageOffset: [-26, -60],
+            balloonOffset: [0, -56]
+          });
+
+      myMap.geoObjects.add(placeMark);
+    }
+  </script>
 {% endblock %}

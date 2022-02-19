@@ -22,7 +22,7 @@ class News(models.Model):
         verbose_name_plural = 'News'
 
     def __str__(self):
-        return self.title[:30]
+        return self.title[:50]
 
 
 class AboutCenterPage(models.Model):
