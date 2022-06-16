@@ -101,13 +101,14 @@ class PhotoAlbum(models.Model):
 
 class PhotoAlbumImage(models.Model):
     image = models.ImageField(upload_to='uploads/img/gallery/%Y/%m',
-                              validators=[validate_image_file_extension])
+                              validators=[validate_image_file_extension],
+                              verbose_name='Photo')
     thumbnail = ImageSpecField(source='image',
                                processors=[ResizeToFill(825, 480)],
                                format='JPEG',
                                options={'quality': 100})
     album = models.ForeignKey('webapp.PhotoAlbum', related_name='images', on_delete=models.CASCADE,
-                              verbose_name='Multimedia gallery')
+                              verbose_name='Photo album')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
